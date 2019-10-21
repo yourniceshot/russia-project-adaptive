@@ -1,0 +1,15 @@
+@import url('./_author/_author.css');
+@import url('./_quot/_quot.css');
+
+.comment__text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 769px) {
+    .comment__text {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}

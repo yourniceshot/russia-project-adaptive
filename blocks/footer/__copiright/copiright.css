@@ -1,0 +1,21 @@
+.footer__copiright {
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 660px) {
+    .footer__copiright {
+        width: 135px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .footer__copiright {
+       align-self: flex-start;
+       margin-top: 48px;
+    }
+}

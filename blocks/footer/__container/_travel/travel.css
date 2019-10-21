@@ -1,0 +1,8 @@
+.footer__item_travel {
+    width: 160px;
+}
+
+@media screen and (max-width: 900px) {
+    .footer__item_travel {
+        width: 106px;
+}

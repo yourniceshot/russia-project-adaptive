@@ -1,0 +1,36 @@
+@font-face {
+    src: url('./Inter-Light-BETA.ttf');
+    font-family: Inter;
+    font-weight: normal;
+}
+
+@font-face {
+    src: url('./Inter-Black.ttf');
+    font-family: Inter;
+    font-weight: bold;
+}
+
+@font-face {
+    src: url('./Inter-Bold.ttf');
+    font-family: Inter;
+    font-weight: 500;
+}
+
+.page {
+    max-width: 1440px;
+    padding-top: 30px;
+    background-color: #2A2C2F;
+    font-family: Inter;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.strong-text {
+    font-weight: bold;
+}
+

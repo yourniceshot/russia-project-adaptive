@@ -1,0 +1,22 @@
+.cover__mask {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+}
+
+.cover__mask:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+@media screen and (max-width: 1025px) {
+
+    .cover__mask {
+        display: none;
+    }
+}

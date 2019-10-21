@@ -1,0 +1,9 @@
+.footer__item_weather {
+    width: 87px;
+}
+
+@media screen and (max-width: 900px) {
+    .footer__item_weather {
+        width: 57px;
+    }
+}

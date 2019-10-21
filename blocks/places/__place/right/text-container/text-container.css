@@ -1,0 +1,19 @@
+@import url('./paragraph/_paragraph.css');
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 800px) {
+    .text-container {
+        margin-top: 52px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .text-container {
+        margin-left: 16px;
+    }
+}

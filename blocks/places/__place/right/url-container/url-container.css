@@ -1,0 +1,34 @@
+@import url('./_url/_url.css');
+@import url('./_website/_website.css');
+
+.url-container {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    padding-top: 15px;
+}
+
+.kosa-url-container {
+    padding-top: 70px;
+}
+
+.baikal-url-container {
+    padding-top: 75px;
+}
+
+@media screen and (max-width: 800px) {
+    .kosa-url-container {
+        padding-top: 60px;
+    }
+
+    .baikal-url-container {
+        padding-top: 33px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .url-container {
+        display: none;
+    }
+}

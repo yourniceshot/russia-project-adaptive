@@ -1,0 +1,41 @@
+.intro__text {
+    width: 100%;
+    font-size: 14px;
+    line-height: 23px;
+    color: #ffffff;
+    font-weight: normal;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1283px) {
+
+    .intro__text {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+
+    .intro__text {
+        width: 74%;
+        line-height: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .intro__text {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .intro__text {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.6rem;
+        margin-bottom: 32px;
+    }
+}

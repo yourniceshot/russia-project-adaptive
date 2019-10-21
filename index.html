@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!--Нужно исправить: У вас произошла путанца с meta тегами-->
+    <!--Ниже вы объединили два тега в один. Правильное написание:-->
+    <!--<meta charset="UTF-8">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Russia</title>
+    <link rel="stylesheet" href="./page/index.css">
+</head>
+
+<body>
+<div class="page">
+    <header class="header">
+        <img src="./images/__logo.svg" alt="logo" class="header__logo">
+        <div class="header__languages">
+            <!--Нужно исправить: Если вы даете элементу модификатор, то должны дублировать имя элемента в классе. Например, правильно-->
+            <!--будет "header__lang header__lang_active". Посмотрите далее по коду, такое встречается часто-->
+
+            <!--не поняла. вы имеете в виду миксы, вроде как "video__item kamchatka", и хотите, чтобы они выглядели так:
+            "video__item video__item_kamchatka"? в таком случае, как быть с микс-модификаторами, которые встречаются
+            в нескольких местах в коде и используются ИМЕННО для того, чтобы задать общий стиль не связанным между собой элементам,
+            не прописывая каждому из них свой модификатор для экономии времени и чтобы не загромождать код?-->
+
+            <!--
+
+            Я говорю не о миксах, а именно о модификаторах.
+            Например, у меня есть два таба переключения языков:
+
+            <a href="#" class="header__lang">Ru</a>
+            <a href="#" class="header__lang">En</a>
+
+            Сейчас они выглядят одинаково. Но как мне показать, что один из них активный? Я добавляю модификатор для элемента.
+
+            Ваш вариант:
+
+            <a href="#" class="header__lang_active">Ru</a>
+            <a href="#" class="header__lang">En</a>
+
+            В таком случае я теряю все свойства, прописанные в header__lang и должен дублировать их в header__lang_active.
+
+            Верный вариант:
+
+            <a href="#" class="header__lang header__lang_active">Ru</a>
+            <a href="#" class="header__lang">En</a>
+
+            Сохранены все свойства header__lang, а header__lang_active добавил свои, модифицировал.
+
+            -->
+
+            <!--Хорошо, идея мне ясна: общие стили схожих элементов пишутся один раз в одном файле с именем элемента, 
+            отличающиеся стили пишутся в разных файлах с модификаторами, но у меня в коде я вижу всего один блок, 
+            подходящий под такую структуру, это футер, его поправила. Просто вы сказали, что это много где встречается, 
+            укажите, пожалуйста, если не сложно, может я все еще недопонимаю какие-то моменты. В блоках places и video 
+            я использую миксы, не модификаторы-->
+
+            <!--
+
+            Обратитесь за консультацией по БЭМ к наставнику. Я не смогу в рамках проверки работы объяснить вам подробно.
+
+            Вообще именно такой ошибки больше не вижу, у вас есть вторая серьезная. На первый взгляд принял ее за первую.
+
+            Разобрал ее в футере, тоже самое есть в comments
+
+            -->
+
+            <a href="#" class="header__lang header__lang_active">Ru</a>
+            <a href="#" class="header__lang">En</a>
+        </div>
+    </header>
+
+    <section class="lead">
+        <h1 class="lead__title">Путешествия по России</h1>
+        <h3 class="lead__subtitle">Настоящая страна не в выпусках новостей, а&nbsp;здесь.</h3>
+        <!--Нужно исправить: В именовании картинок нельзя допускать пробела-->
+        <img class="lead__image" src="./images/kalegin_vector.svg" alt="polka" width="984" height="554"/>
+        <span class="lead__caption">ваша полка — верхняя</span>
+    </section>
+
+    <section class="intro">
+        <h2 class="intro__title">Чего мы там не видели?</h2>
+        <p class="intro__text">По опросам ВЦИОМ, 95% россиян мечтают куда-нибудь поехать, но только 36% планируют провести отпуск в родной стране. Мол, чего мы тут, дома, не видели? На самом деле, Россия — это целая вселенная с ласковым морем юга, густыми лесами Саян и суровыми льдами плато Путорана.
+            А ещё увидеть все эти красоты можно без миллионов на счету, загранпаспорта и многочасовых перелетов. Как, например, Вера Башмакова — смелая молодая мама, которая взяла в охапку троих детей, усадила их в свою «Ладу» и проехала 20 тысяч километров по родной стране. Мы выбрали и описали некоторые интересные места, достойные вашего отпуска.</p>
+        <ul class="intro__list">
+            <li><span class="strong-text">Часовых поясов</span> 11</li>
+            <li><span class="strong-text">Объектов природного наследия ЮНЕСКО</span> 12</li>
+            <li><span class="strong-text">Объектов культурного наследия ЮНЕСКО</span> 16</li>
+            <li><span class="strong-text">Природных заповедников</span> 105 </li>
+            <li><span class="strong-text">Аэропортов</span> 241</li>
+        </ul>
+    </section>
+
+    <section class="photo-grid">
+        <img src="./images/grid-photos/1.png" alt="window in train" class="photo-grid__card image">
+        <img src="./images/grid-photos/2.png" alt="mountain in clouds" class="photo-grid__card image">
+        <img src="./images/grid-photos/3.png" alt="dog on the stack" class="photo-grid__card image">
+        <img src="./images/grid-photos/4.png" alt="forest in clouds" class="photo-grid__card image">
+        <img src="./images/grid-photos/5.png" alt="car on the ice" class="photo-grid__card image">
+        <img src="./images/grid-photos/6.png" alt="beach" class="photo-grid__card image">
+        <img src="./images/grid-photos/7.png" alt="mountain" class="photo-grid__card image">
+        <img src="./images/grid-photos/8.png" alt="sign" class="photo-grid__card image">
+        <img src="./images/grid-photos/9.png" alt="mountain in clouds" class="photo-grid__card image">
+        <img src="./images/grid-photos/10.png" alt="mountain" class="photo-grid__card image">
+        <img src="./images/grid-photos/11.png" alt="mountain" class="photo-grid__card image">
+        <img src="./images/grid-photos/12.png" alt="mountain in clouds" class="photo-grid__card image">
+    </section>
+
+    <section class="places">
+        <div class="place">
+            <div class="column-left">
+                <h2 class="place__title kosa-title">Куршская коса</h2>
+                <img src="./images/kosa.png" class="place__image kosa-image" alt="Kurshskaya kosa">
+            </div>
+            <div class="column-right">
+                <div class="url-container kosa-url-container">
+                    <h4 class="place__url">url</h4>
+                    <a href="http://park-kosa.ru/" class="place__website">park-kosa.ru</a>
+                </div>
+                <div class="text-container">
+                    <p class="place__paragraph">Здесь, посреди лесов и песчаных дюн, вы сможете увидеть два водных горизонта — спокойного Куршского залива с одной стороны и подёрнутого рябью волн Балтийского моря с другой. Уникальная природная зона на краю российского анклава.</p>
+                    <p class="place__paragraph">На этом Калининградская область не заканчивается. Для путешественника и исследователя там же по соседству — самая западная точка России, Балтийская коса, — и немецкое наследие россыпи небольших приморских городов. Атмосфера здешних мест исключает суету, окуная в спокойствие природы и запах стального, прохладного моря.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="place">
+            <div class="column-left">
+                <h2 class="place__title">Кольский</h2>
+                <img src="./images/kolski.png" class="place__image" alt="Kolskiy">
+            </div>
+            <div class="column-right">
+                <div class="url-container">
+                    <h4 class="place__url">url</h4>
+                    <a href="https://yourshot.nationalgeographic.com/photos/?keywords=kolskiy" class="place__website">National Geographic</a>
+                </div>
+                <div class="text-container">
+                    <p class="place__paragraph">Почти весь полуостров находится за Полярным кругом. Саамская тундра, от которой на юг — тайга, а на север — Ледовитый океан, прикидывающийся Баренцевым морем.</p>
+                    <p class="place__paragraph">Возможно, вы смотрели Звягинцева и даже слышали историю арктического фестиваля в Териберке. Возможно, слово «Хибины» не осталось под снегом школьных воспоминаний об уроках географии. Возможно, вы не интересовались пронизывающей земную кору сверхглубокой скважиной, а от апатитов вас давно накрывает апатия. Но ваша мечта увидеть северное сияние начинает сбываться с билетом в Мурманск.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="place">
+            <div class="column-left">
+                <h2 class="place__title">Алтай</h2>
+                <img src="./images/altai.png" class="place__image" alt="Altai">
+            </div>
+            <div class="column-right">
+                <div class="url-container">
+                    <h4 class="place__url">url</h4>
+                    <a href="https://www.facebook.com/vera.bashmakova/posts/10156011613718822" class="place__website">Facebook</a>
+                </div>
+                <div class="text-container">
+                    <p class="place__paragraph">Алтай — одно из красивейших мест в России. В первую очередь из-за гор: если ехать вдоль хребта, вы увидите склоны, усыпанные соснами, горные реки и озёра. А если вы откроете в автомобиле окна, сможете познакомиться с невидимым чудом здешних мест — горным воздухом.</p>
+                    <p class="place__paragraph"> Климат на Алтае умеренный, поэтому ехать сюда лучше всего летом. Так вы увидите всё разнообразие местной флоры и фауны. По лесам Алтая бродят лоси, над хребтами летают орлы, а на равнинах пасутся косули. И знаменитые манулы — тоже обитатели Алтайского края.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="place">
+            <div class="column-left">
+                <h2 class="place__title baikal-title">Зимний Байкал</h2>
+                <img class="place__image baikal-image" src="./images/baikal.png" alt="Baikal">
+            </div>
+            <div class="column-right">
+                <div class="url-container baikal-url-container">
+                    <h4 class="place__url baikal-url">url</h4>
+                    <a href="https://vk.com/baikalmile" class="place__website baikal-website">https://vk.com/baikalmile</a>
+                </div>
+                <div class="text-container">
+                    <p class="place__paragraph">Всем известен Байкал как крупнейшее озеро в мире. Многие также знают, что это самый большой источник пресной воды и одно из красивейших мест в России.</p>
+                    <p class="place__paragraph">Конечно, это всё так. Но Байкал ещё идеальное место для соревнований по скийорингу. Это такой вид спорта, когда лыжник привязывает себя к мотоциклу, и тандем старается развить как можно бóльшую скорость на льду. В марте 2019 года на фестивале «Байкальская миля» был поставлен мировой рекорд — 197.011 км/ч.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="place">
+            <div class="column-left">
+                <h2 class="place__title">Карелия</h2>
+                <img src="./images/karelia.png" class="place__image" alt="Karelia">
+            </div>
+            <div class="column-right">
+                <div class="url-container">
+                    <h4 class="place__url">url</h4>
+                    <a href="http://vodlozero.ru/" class="place__website">http://vodlozero.ru/</a>
+                </div>
+                <div class="text-container">
+                    <p class="place__paragraph">Сибирь заканчивается не на Урале, а в Карелии: образующая тайгу сибирская лиственница не растёт западнее Водлозера. Зато здесь она вымахивает на 30 метров — леса карельских национальных парков из-за непроходимых болот никогда не знали топора. Некоторым соснам уже больше чем полтысячелетия. Прикоснитесь к живому существу, видевшему солнце раньше, чем увидал его Иван Грозный. В девственном лесу на сотню километров не встретишь тропы. А на редких тропинках деревья в паре метров от земли помечены медвежьими когтями. Чтобы все знали, кто тут хозяин.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video">
+        <h2 class="video__title">В глубины Земли и&nbsp;в&nbsp;дальний космос</h2>
+        <h3 class="video__subtitle">Видео от студии Stereotactic о местах в России, где ведутся фундаментальные исследования</h3>
+        <div class="video-content">
+
+            <div class="video__item kamchatka">
+                <img class="video-bg" src="./blocks/video/__content/__item/bg/video-1.png" alt="kamchatka">
+                <div class="video__mask"></div>
+                <div class="video-text">
+                    <a class="video__link" href="https://vimeo.com/81106671"><img class="video__play-icon" src="./blocks/video/__content/__icon_play.png" alt="play icon"></a>
+                    <div class="video-info">
+                        <span class="video__duration">6:30</span>
+                        <h4 class="video__name">Colors of Kamchatka</h4>
+                        <span class="video__director">Director: Pavel Karykhalin</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video__item observatory">
+                <img class="video-bg" src="./blocks/video/__content/__item/bg/video-2.png" alt="observatory">
+                <div class="video__mask"></div>
+                <div class="video-text">
+                    <a class="video__link" href="https://vimeo.com/290675450"><img class="video__play-icon" src="./blocks/video/__content/__icon_play.png" alt="play icon"></a>
+                    <div class="video-info">
+                        <span class="video__duration">24:45</span>
+                        <h4 class="video__name">Обсерватория | Observatory</h4>
+                        <span class="video__director">Director: Alexander Khudokon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comments">
+        <h2 class="comments__title">Фотографы, снимающие Россию</h2>
+        <h3 class="comments__subtitle">Природа и люди вдохновили их работы, удостоенные наград на международных конкурсах</h3>
+        <div class="comments__container">
+            <div class="comment">
+
+                <!--
+
+                Здесь ошибка, аналогичная той, что в футере.
+
+                Вы не должны тянуть имя элемента в его потомков. В данном случае идеально будет сделать блок comment и переиспользовать его далее.
+                Например, ваша структура может выглядеть так:
+
+                <div class="comment">
+                <img class="comment__picture" src="./images/hafizov.png" alt="hafizov">
+                <div class="comments__text">
+                    <p class="comments__quot">«Если в город едут туристы — неважно за чем они туда едут: за шамбалой или фрески Рублева искать, или на родину Тарковского — туристы обеспечивают любой город молодёжью, рабочими местами и в конечном счёте наполняют его жизнью.»</p>
+                    <span class="comments__author">Иван Хафизов</span>
+                </div>
+            </div>
+
+                -->
+
+                <img class="comment__picture" src="./images/lyagushkin.png" alt="lyagushkin">
+                <div class="comment__text">
+                    <p class="comment__quot">«Если вам кажется, что в России ничего не&nbsp;происходит, то просто выгляньте “наружу”…»</p>
+                    <span class="comment__author">Виктор Лягушкин</span>
+                </div>
+            </div>
+
+            <div class="comment">
+                <img class="comment__picture" src="./images/hafizov.png" alt="hafizov">
+                <div class="comment__text">
+                    <p class="comment__quot">«Если в город едут туристы — неважно за чем они туда едут: за шамбалой или фрески Рублева искать, или на родину Тарковского — туристы обеспечивают любой город молодёжью, рабочими местами и в конечном счёте наполняют его жизнью.»</p>
+                    <span class="comment__author">Иван Хафизов</span>
+                </div>
+            </div>
+
+            <div class="comment">
+                <img class="comment__picture" src="./images/maximishin.png" alt="maximishin">
+                <div class="comment__text">
+                    <p class="comment__quot">«Ты приезжаешь, и люди рассказывают тебе, как им плохо. А когда ты покажешь, как им плохо, то ты сволочь и всё очернил.»</p>
+                    <span class="comment__author">Сергей Максимишин</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cover">
+        <img class="cover__bg" src="./blocks/cover/__bg/cover-bg.png" alt="trains" height="594" width="1184">
+        <a class="cover__link" href="https://stampsy.com/na-elektrichkakh-do-baikala">До Байкала «на&nbsp;собаках»</a>
+        <h3 class="cover__subtitle">По мотивам учебной темы о Транссибе и iframes — путешествие от столицы до Байкала на электричках.</h3>
+        <div class="cover__mask"></div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__links-container">
+
+            <!--
+
+            Ваша ошибка тут в том, что, вероятно, вам кажется, что нужно тянуть с собой название родителя у потомка.
+            Но footer__links-container и footer__links-container_item не должны быть связаны именами.
+            Вы пытаетесь модифицировать footer__links-container, а нужно сделать новый элемент footer
+            Вместо footer__links-container_item можно написать footer__item-link (например). Видите, он никак не связан
+            со своим родителем, и это правильно.
+
+            А теперь если надо мы можем добавить модификатор footer__item-link footer__item-link_map (А может тут и не нужен модификатор)
+
+            -->
+
+            <a class="footer__item footer__item_maps" href="https://yandex.ru/maps/">Карты</a>
+            <a class="footer__item footer__item_weather" href="https://yandex.ru/pogoda/">Погода</a>
+            <a class="footer__item footer__item_rasp" href="https://rasp.yandex.ru/">Расписание</a>
+            <a class="footer__item footer__item_calendar" href="https://calendar.yandex.ru/">Календарь</a>
+            <a class="footer__item footer__item_travel" href="https://travel.yandex.ru">Путешествия</a>
+        </div>
+        <span class="footer__copiright">&#169; 2019. Анастасия Медникова</span>
+    </footer>
+</div>
+</body>
+</html>
+
+<!--
+В целом по работе:
+
+По работе у меня немного замечаний. Код написан чисто, верстка практически полностью соответствует макету. Нужно исправить
+только несколько моментов:
+
+Похвально, что вы пытаетесь установить размер шрифта через и отступы текста через rem и em. Но эти единицы измерения тяжело
+контролировать и их использование не всегда оправдано даже опытными разработчиками. Вы можете использовать любые единицы
+но вы должны добиться соответствия макету
+https://yadi.sk/i/2a2iuthRbUiWMg
+https://yadi.sk/i/VRawYeKy0dCPFw
+https://yadi.sk/i/TbCb5riYfxUI5Q
+https://yadi.sk/i/ajzbJuFiETNZLQ
+
+-->
+
+<!-- В целом по работе:
+
+По шрифтам все хорошо. Но вы сильно не попадаете в сетку, особенно на 1280, в остальных местах есть моменты, но меньше.
+
+Не вижу смысла отправлять скрин, так как он не даст нужной информации. Лучше сами наложите сетку.
+Похоже основные ваши проблемы происходят от того, что вы пытаетесь все ширины задать в процентах. В такой ситуации становится довольно сложно
+контролировать поведение сайта на разных ширинах.
+
+Наиболее очевидные проблемы на 1280:
+
+1. Ширина header не соответствует макету
+2. lead__image меньше чем в макете из-за обертки lead
+3. photo-grid на этой ширине экрана должны быть 4 в ряду
+
+-->
+
+<!--
+
+В целом по работе:
+
+На больших разрешениях сайт теперь выглядит отлично!
+
+По исправлениям:
+
+1. Уже на 770px сайт не соответствует макету, нужно просмотреть все отступы, шрифты. Используйте абсолютные величины (px).
+Далее при уменьшении размера окна все тоже самое. Используйте плагин https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=ru
+чтобы увидеть ваши отступления от макета и исправьте на всех разрешениях. Не забудьте когда закончите с мобильной версией еще раз
+перепроверить десктопную.
+
+2. Блок intro не адаптируется вообще
+
+-->
+
+<!--Пожалуйста, не обижайтесь на меня, если я вела себя грубо, просто пыталась получше во всем разобраться, спасибо за помощь-->

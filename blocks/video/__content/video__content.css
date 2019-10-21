@@ -1,0 +1,16 @@
+@import url('./__item/video__item.css');
+
+.video-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    position: relative;
+}
+
+@media screen and (max-width: 700px) {
+    .video-content {
+        flex-direction: column;
+    }
+}
+

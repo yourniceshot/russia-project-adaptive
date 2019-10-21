@@ -1,0 +1,9 @@
+.footer__item_calendar {
+    width: 129px;
+}
+
+@media screen and (max-width: 900px) {
+    .footer__item_calendar {
+        width: 86px;
+    }
+}

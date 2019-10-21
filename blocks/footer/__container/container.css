@@ -1,0 +1,45 @@
+@import url('./_calendar/calendar.css');
+@import url('./_maps/maps.css');
+@import url('./_rasp/raspisanie.css');
+@import url('./_travel/travel.css');
+@import url('./_weather/weather.css');
+@import url('./_item/footer_item.css');
+
+.footer__links-container {
+    width: 56%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 1150px) {
+   .footer__links-container {
+       width: 71%;
+   } 
+}
+
+@media screen and (max-width: 955px) {
+    .footer__links-container {
+        width: 68%;
+    } 
+}
+
+@media screen and (max-width: 767px) {
+    .footer__links-container {
+        width: 64%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .footer__links-container {
+        width: 70%;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .footer__links-container {
+       width: 100%;
+       flex-direction: column;
+    }
+}

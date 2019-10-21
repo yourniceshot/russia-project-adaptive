@@ -1,0 +1,69 @@
+@import url('./__container/container.css');
+@import url('./__copiright/copiright.css');
+
+.footer {
+    width: 82%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    padding-bottom: 0;
+}
+
+@media screen and (max-width: 1400px) {
+
+    .footer {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+
+    .footer {
+        width: 89%;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+
+    .footer {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1281px) {
+
+    .footer {
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+
+    .footer {
+        width: 94%;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .footer {
+        width: 94%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .footer {
+        width: 75%;
+        flex-direction: column;
+        margin-left: 16px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .footer {
+        width: 57%;
+        flex-direction: column;
+
+    }
+}

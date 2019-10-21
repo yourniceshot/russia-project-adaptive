@@ -1,0 +1,14 @@
+@import url('./_title/_title.css');
+@import url('./_image/_image.css');
+
+.column-left {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 426px) {
+    .column-left {
+        width: 100%;
+    }
+}

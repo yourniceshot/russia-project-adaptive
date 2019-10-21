@@ -1,0 +1,39 @@
+@import url('./__place/place.css');
+
+.places {
+    width: 68%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    margin-bottom: 27px;
+}
+
+@media screen and (max-width: 1283px) {
+
+    .places {
+        width: 77%;
+        margin-bottom: 21px;
+    }
+}
+
+@media screen and (max-width: 1203px) {
+
+    .places {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .places{
+        width: 94%;
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .places {
+        width: 100%;
+        margin-bottom: 0;
+    }
+}

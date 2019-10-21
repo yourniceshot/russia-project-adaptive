@@ -1,0 +1,16 @@
+@import url('./_img/_picture.css');
+@import url('./_txt/txt.css');
+
+.comment {
+    width: calc((100% - 38px)/3);
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 769px) {
+    .comment {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 47px;
+    }
+}
