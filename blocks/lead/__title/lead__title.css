@@ -17,18 +17,23 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 670px) {
     .lead__title {
+        font-size: 86px;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .lead__title {
+        font-size: 76px;
+        line-height: 80px;
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 530px) {
     .lead__title {
+        font-size: 60px;
+        line-height: 70px;
     }
 }
 
